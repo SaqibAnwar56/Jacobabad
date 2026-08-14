@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4fb8"/>
+      <stop offset="100%" stop-color="#17c3f2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- outer ajrak-pattern ring -->
+  <circle cx="60" cy="60" r="58" fill="url(#bgGrad)"/>
+  <circle cx="60" cy="60" r="58" fill="none" stroke="#f7f0e0" stroke-width="1.4" opacity="0.35"/>
+
+  <!-- small diamond motifs around the ring (ajrak block-print echo) -->
+  <g fill="#f7f0e0" opacity="0.55">
+    <rect x="57.5" y="6" width="5" height="5" transform="rotate(45 60 8.5)"/>
+    <rect x="57.5" y="109" width="5" height="5" transform="rotate(45 60 111.5)"/>
+    <rect x="6" y="57.5" width="5" height="5" transform="rotate(45 8.5 60)"/>
+    <rect x="109" y="57.5" width="5" height="5" transform="rotate(45 111.5 60)"/>
+  </g>
+
+  <!-- inner dark disc so the tower reads clearly -->
+  <circle cx="60" cy="60" r="46" fill="#12100c" opacity="0.18"/>
+
+  <!-- tower silhouette (Victoria Tower reference) -->
+  <g fill="#f7f0e0">
+    <!-- base arches -->
+    <path d="M34 88 L34 74 Q34 66 42 66 Q50 66 50 74 L50 88 Z"/>
+    <path d="M70 88 L70 74 Q70 66 78 66 Q86 66 86 74 L86 88 Z"/>
+    <!-- central tower shaft -->
+    <rect x="50" y="40" width="20" height="48"/>
+    <!-- clock roundel -->
+    <circle cx="60" cy="52" r="7" fill="#12100c" opacity="0.4"/>
+    <circle cx="60" cy="52" r="7" fill="none" stroke="#f7f0e0" stroke-width="1.6"/>
+    <line x1="60" y1="52" x2="60" y2="48" stroke="#f7f0e0" stroke-width="1.4" stroke-linecap="round"/>
+    <line x1="60" y1="52" x2="63" y2="53.5" stroke="#f7f0e0" stroke-width="1.4" stroke-linecap="round"/>
+    <!-- domed cap -->
+    <path d="M48 40 Q60 20 72 40 Z"/>
+    <circle cx="60" cy="17" r="3"/>
+    <!-- side finials -->
+    <circle cx="42" cy="63" r="2.6"/>
+    <circle cx="78" cy="63" r="2.6"/>
+    <!-- base plinth -->
+    <rect x="30" y="88" width="60" height="6" rx="1.5"/>
+  </g>
+</svg>
