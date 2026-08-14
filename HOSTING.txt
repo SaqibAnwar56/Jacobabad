@@ -1,0 +1,121 @@
+HOW TO PUT THIS WEBSITE ONLINE (HOSTING) — SIMPLE GUIDE
+================================================================
+Made by: Saqib Anwar
+
+★★★ USING INFINITYFREE? READ THIS FIRST ★★★
+----------------------------------------------------------------
+Found the exact cause of the InfinityFree errors: InfinityFree has a
+hard file size limit — 10MB per file, and just 1MB specifically for
+HTML files. That's confirmed on their own support forum.
+
+This zip's index.html is small (about 35KB — nowhere near their 1MB
+limit) and the largest file, the video, is 8.5MB (under their 10MB
+limit), so everything here should upload to InfinityFree without
+errors. If you were getting errors before, you likely had an older,
+single-file version where index.html itself was ~29MB — InfinityFree
+was rejecting that outright.
+
+STEPS FOR INFINITYFREE SPECIFICALLY:
+1. Log into your InfinityFree control panel → Online File Manager
+   (or use FileZilla with the FTP details InfinityFree gave you —
+   FTP tends to be more reliable for multiple files than the web file
+   manager).
+2. Go into the htdocs folder (this is InfinityFree's equivalent of
+   public_html — it's the folder your domain actually shows).
+3. Upload these items into htdocs, keeping them exactly as they are:
+     index.html
+     css folder (with style.css inside)
+     js folder (with script.js inside)
+     assets folder (with images and video sub-folders inside)
+   If your file manager only lets you upload files one at a time (not
+   whole folders), create the css, js, assets/images and assets/video
+   folders manually first, then upload each file into the matching
+   folder.
+4. Double-check nothing landed one folder too deep — index.html
+   should be directly inside htdocs, not inside
+   htdocs/some-other-folder/index.html.
+5. Visit your InfinityFree domain (yoursite.infinityfreeapp.com or
+   your custom domain) — it should now load correctly.
+
+If you still get an error at this point, please tell me the EXACT
+error message InfinityFree shows — "errors arahe hain" tells me
+something's wrong but not what, and different InfinityFree errors
+need different fixes.
+
+
+OTHER HOSTING OPTIONS
+================================================================
+I checked this website's files very carefully — every file, every
+link between them, everything matches perfectly. There are no broken
+paths, no missing files, nothing wrong with the code itself. If a
+website ever fails specifically when you try to host it (but the code
+is correct), it's almost always about HOW the files were uploaded, not
+the files themselves.
+
+Below are three more ways to host it, from easiest to more advanced.
+
+
+OPTION 1 — NETLIFY DROP (easiest, no account, no signup required)
+----------------------------------------------------------------
+1. First, fully extract the zip file on your computer (not your
+   phone — a computer makes this step much easier) into a folder.
+   You should see index.html sitting next to a css folder, a js
+   folder, and an assets folder — all in the same place.
+2. Open this link in a browser: https://app.netlify.com/drop
+3. Drag that WHOLE FOLDER (not the zip — the extracted folder) onto
+   the page.
+4. Wait a few seconds. Netlify gives you an instant live web address
+   (something like https://random-name-123.netlify.app) — your
+   website is now online and anyone can visit that link.
+5. Optional: create a free Netlify account afterwards to keep that
+   link permanently and later connect your own domain name to it.
+
+This is the fastest way to prove the website works correctly online.
+If it works here (it will), the files are fine — any hosting problem
+before this was about the upload process, not the website itself.
+
+
+OPTION 2 — GITHUB PAGES (also free, good if you want a github.com
+link or plan to keep editing the code over time)
+----------------------------------------------------------------
+1. Create a free account at https://github.com if you don't have one.
+2. Create a new repository (the "+" button, top right → "New
+   repository"). Name it anything, e.g. "jacobabad-website".
+3. On the repository page, click "uploading an existing file" and
+   drag in ALL the extracted files and folders (index.html, css, js,
+   assets, robots.txt, sitemap.xml) — keep the folder structure as-is.
+4. Go to the repository's Settings tab → Pages (left sidebar) → under
+   "Branch" choose "main" and "/ (root)" → Save.
+5. After a minute or two, GitHub shows you a live link like
+   https://yourusername.github.io/jacobabad-website/
+
+
+OPTION 3 — SHARED HOSTING / cPanel (Hostinger, GoDaddy, etc.) — if
+you've already bought hosting and a domain
+----------------------------------------------------------------
+1. Log into your hosting control panel (usually called cPanel).
+2. Open "File Manager".
+3. Navigate into the folder called public_html (this is the folder
+   your domain actually shows to visitors — files placed outside it
+   won't be visible on your website).
+4. Upload the zip file here, then right-click it and choose "Extract"
+   inside File Manager.
+5. IMPORTANT: after extracting, index.html, the css folder, the js
+   folder, and the assets folder must sit DIRECTLY inside public_html
+   — not inside an extra sub-folder. If extraction created a folder
+   like public_html/jacobabad-city-website/index.html, move all those
+   files and folders up one level so it's public_html/index.html,
+   public_html/css, public_html/js, public_html/assets.
+6. Visit your domain in a browser — the site should now load.
+
+The single most common mistake with cPanel is step 5 — files ending
+up one folder too deep. If your domain shows a blank page or a
+directory listing instead of the website, this is almost always why.
+
+
+IF IT STILL DOESN'T WORK AFTER TRYING OPTION 1
+----------------------------------------------------------------
+Netlify Drop has no configuration to get wrong — if the site doesn't
+load correctly there, please send me a screenshot of exactly what you
+see, and the netlify.app link it gives you, so I can look at the real
+problem directly instead of guessing.
