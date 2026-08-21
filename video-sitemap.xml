@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://jacobabad.vercel.app/video.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://jacobabad.vercel.app/assets/images/grand-shrine-hero.jpg</video:thumbnail_loc>
+      <video:title>Jacobabad City — Best Places to Visit</video:title>
+      <video:description>A short video tour of Jacobabad, Sindh, Pakistan, featuring historic landmarks, architecture, streets and places to visit around the city.</video:description>
+      <video:content_loc>https://jacobabad.vercel.app/assets/video/jacobabad-tour.mp4</video:content_loc>
+    </video:video>
+  </url>
+</urlset>
