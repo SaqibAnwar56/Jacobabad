@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://jacobabad.vercel.app/sitemap.xml
+Sitemap: https://jacobabad.vercel.app/video-sitemap.xml
